@@ -47,7 +47,7 @@
 .lead {
   margin: 0 auto;
   padding-top: 56px;
-  max-width: 76.875%;
+  max-width: 984px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -132,47 +132,50 @@
 .photo-grid {
   margin: 0 auto;
   padding-top: 92px;
-  max-width: 92.5%;
+  max-width: 1184px;
   display: grid;
-  grid-auto-rows: 1fr;
+  grid-auto-rows: 213px;
   grid-template-columns: repeat(4, 284px);
   gap: 16px 16px;
 }
 
 .photo-grid__item {
-  object-fit: contain;
+  object-fit: fill;
   margin: 0;
   padding: 0;
-  /* min-width: 284px; */
-  max-width: 100%;
+  width: 100%;
+  min-height: 100%;
 }
 
 /* places */
 
 .places {
   padding-top: 92px;
+  padding-bottom: 92px;
   max-width: 984px;
   margin: 0 auto;
 }
 
 .place {
-  padding-bottom: 90px;
+  padding-bottom: 80px;
   display: grid;
   grid-auto-flow: column;
   grid-auto-rows: 1fr;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 460px 484px;
   grid-template-rows: max-content max-content;
   column-gap: 40px;
   row-gap: 48px;
   grid-template-areas:
     "place__title place__website"
     "place__image place__paragraphs";
-  align-content: end;
-  align-items: end;
-  justify-content: start;
+}
+
+.place:last-child {
+  padding-bottom: 0;
 }
 
 .place__title {
+  align-self: end;
   grid-area: place__title;
   margin: 0 0;
   font-style: normal;
@@ -184,10 +187,14 @@
 }
 
 .place__image {
+  width: 100%;
+  max-height: 100%;
   grid-area: place__image;
+  align-self: start;
 }
 
 .place__website {
+  align-self: end;
   grid-area: place__website;
 }
 
@@ -197,6 +204,7 @@
   font-weight: 400;
   font-size: 12px;
   line-height: 12px;
+  padding-bottom: 12px;
   /* identical to box height, or 100% */
 
   letter-spacing: 2px;
@@ -216,15 +224,27 @@
   color: #ffffff;
 }
 
+.place__paragraphs {
+  justify-self: start;
+  align-self: start;
+  grid-area: place__paragraphs;
+}
+
 .place__paragraph {
-  grid-area: place__paragraph;
+  margin: 0 0;
+  margin-bottom: 26px;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
-  line-height: 163%;
+  /* line-height: 163%; */
+  line-height: 29px;
   /* or 29px */
 
   color: #ffffff;
+}
+
+.place__paragraph:last-child {
+  margin-bottom: 0;
 }
 
 .cover {
@@ -274,6 +294,7 @@
 .footer {
   width: 92.5%;
   margin: 0 auto;
+  padding-top: 92px;
   padding-bottom: 18px;
   display: flex;
   flex-direction: row;
@@ -283,10 +304,13 @@
 .footer__links {
   display: flex;
   flex-direction: row;
+  margin: 0 0;
+  padding: 0 0;
 }
 
 .footer__link-item {
   list-style: none;
+  padding-right: 18px;
 }
 
 .footer__link {
@@ -300,6 +324,8 @@
 }
 
 .footer__copyright {
+  margin: 0 0;
+  padding: 0 0;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -309,4 +335,55 @@
   text-align: right;
 
   color: #ffffff;
+}
+
+@media screen and (max-width: 1024px) {
+  /* стили для планшета в альбомной ориентации */
+
+  .header {
+    max-width: 928px;
+  }
+
+  .lead {
+    padding-top: 48px;
+    max-width: 928px;
+  }
+
+  .lead__image {
+    margin-top: 56px;
+  }
+
+  .intro {
+    padding-left: 48px;
+  }
+
+  .photo-grid {
+    grid-template-columns: repeat(3, 300px); /* ИЗМЕНЕНО */
+    gap: 14px 14px; /* ИЗМЕНЕНО */
+    grid-auto-rows: 225px;
+  }
+
+  .place {
+    max-width: 928px;
+    grid-template-columns: 440px 456px;
+    gap: 48px 32px;
+  }
+
+  .cover__title {
+    padding: 195px 232px 32px;
+  }
+
+  .cover__subtitle {
+    padding-bottom: 195px;
+  }
+
+  .footer {
+    max-width: 928px;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* стили для планшета */
+}
+@media screen and (max-width: 320px) {
+  /* стили для малого смартфона */
 }
