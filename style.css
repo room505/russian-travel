@@ -41,6 +41,11 @@
   color: #ffffff;
   list-style: none;
   margin-left: 18px;
+  text-decoration: none;
+}
+
+.header__lang-link:hover {
+  text-decoration: underline;
 }
 
 /* LEAD */
@@ -224,11 +229,14 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
-  /* identical to box height, or 122% */
-
   text-decoration-line: underline;
-
+  transition: opacity 0.3s linear;
+  opacity: 1;
   color: #ffffff;
+}
+
+.place__link:hover {
+  opacity: 0.8;
 }
 
 .place__paragraphs {
@@ -266,6 +274,7 @@
   width: 92.5%;
   background-image: url(./images/overlay.jpg);
   background-position: center center;
+  /* background: rgba(42, 44, 47, 0.3); */
   background-size: cover;
 }
 
@@ -276,7 +285,7 @@
 }
 
 .cover__link:hover {
-  background: rgba(42, 44, 47, 0.3);
+  background: rgba(42, 44, 47, 0.8);
 }
 
 .cover__title {
