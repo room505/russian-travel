@@ -164,7 +164,7 @@
   padding-bottom: 80px;
   display: grid;
   grid-auto-flow: column;
-  grid-auto-rows: 1fr;
+  grid-auto-rows: min-content;
   grid-template-columns: 46.748% 49.187%;
   grid-template-rows: min-content min-content;
   column-gap: 40px;
@@ -344,7 +344,7 @@
   padding: 0 0;
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 16px;
   /* identical to box height, or 114% */
 
@@ -455,6 +455,10 @@
     line-height: 12px;
   }
 
+  .place__link {
+    line-height: 21px;
+  }
+
   .place__paragraph {
     margin-bottom: 25px;
   }
@@ -467,16 +471,26 @@
 
   .place__title {
     font-size: 42px;
-    line-height: 46px;
-  }
-
-  .place__url-heading {
-    line-height: 12px;
+    line-height: 44px;
+    max-width: 330px;
   }
 
   .place__paragraph {
     font-size: 16px;
     line-height: 163%;
+  }
+
+  .cover__title {
+    padding: 115px 0 32px;
+  }
+
+  .cover__subtitle {
+    padding-bottom: 115px;
+  }
+
+  .footer {
+    padding-top: 88px;
+    width: ;
   }
 }
 /* ================================================================================ */
@@ -530,6 +544,7 @@
   .intro__title {
     font-size: 32px;
     line-height: 35px;
+    max-width: 250px;
   }
 
   .intro__subtitle {
@@ -549,14 +564,16 @@
   }
 
   .place {
+    grid-auto-columns: 1fr;
     grid-template-columns: 1fr;
     grid-template-rows: min-content min-content min-content min-content;
-    gap: 32px 0px;
+    row-gap: 32px;
     grid-template-areas:
       "place__title"
       "place__website"
       "place__image"
       "place__paragraphs";
+    justify-items: center;
     padding-bottom: 50px;
   }
   .place__title {
@@ -570,10 +587,14 @@
   }
 
   .place__paragraph {
+    /* max-width: 280px; */
     padding: 0 16px 0;
+    /* margin: 0 auto; */
+    /* max-width: 100%; */
   }
 
   .cover__title {
+    max-width: 288px;
     padding-top: 33px;
     padding-bottom: 16px;
     font-size: 32px;
@@ -581,17 +602,40 @@
   }
 
   .cover__subtitle {
+    max-width: 288px;
     font-size: 14px;
     line-height: 16px;
     padding-bottom: 33px;
   }
 
   .footer {
+    max-width: 70%;
+    padding-top: 66px;
+    margin-left: 16px;
     flex-direction: column;
     align-items: flex-start;
   }
 
   .footer__links {
     flex-direction: column;
+  }
+
+  .footer__link-item {
+    padding-bottom: 32px;
+    padding-right: 0;
+  }
+
+  .footer__link-item:last-of-type {
+    padding-bottom: 48px;
+  }
+
+  .footer__link {
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  .footer__copyright {
+    font-size: 14px;
+    line-height: 14px;
   }
 }
