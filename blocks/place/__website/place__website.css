@@ -1,0 +1,11 @@
+.place__website {
+  justify-self: start;
+  align-self: end;
+  grid-area: place__website;
+}
+
+@media screen and (min-width: 320px) and (max-width: 679px) {
+  .place__website {
+    padding: 0 16px 0;
+  }
+}

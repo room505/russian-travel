@@ -1,0 +1,5 @@
+.place__paragraphs {
+  justify-self: start;
+  align-self: start;
+  grid-area: place__paragraphs;
+}

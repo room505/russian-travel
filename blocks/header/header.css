@@ -1,0 +1,28 @@
+.header {
+  margin: 0 auto;
+  width: 92.5%;
+  padding-top: 28px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .header {
+    width: 90.625%; /*928px*/
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    width: 93.75%;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 692px) {
+  .header {
+    padding-top: 16px;
+    width: 90%;
+  }
+}
