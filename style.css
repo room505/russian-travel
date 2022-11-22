@@ -263,18 +263,10 @@
 }
 
 .cover {
-  /* margin: 0 0;
-  width: 92.5000%;
-  display: flex;
-  background-image: url(./images/overlay.jpg);
-  background-position: center;
-  flex-direction: column;
-  align-items: center; */
   margin: 0 auto;
   width: 92.5%;
   background-image: url(./images/overlay.jpg);
   background-position: center center;
-  /* background: rgba(42, 44, 47, 0.3); */
   background-size: cover;
 }
 
@@ -344,8 +336,12 @@
   font-size: 16px;
   line-height: 18px;
   /* identical to box height, or 112% */
-
+  transition: opacity 0.3s linear;
   color: #ffffff;
+}
+
+.footer__link:hover {
+  opacity: 0.8;
 }
 
 .footer__copyright {
@@ -446,9 +442,6 @@
     margin: 0 auto;
   }
 
-  .intro__subtitle {
-  }
-
   .photo-grid {
     width: 93.75%;
     grid-template-columns: repeat(2, 48.8888888888889%); /* ИЗМЕНЕНО 300px */
@@ -499,7 +492,6 @@
 
   .footer {
     padding-top: 88px;
-    width: ;
   }
 }
 /* ================================================================================ */
