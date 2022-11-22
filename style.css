@@ -558,6 +558,10 @@
     gap: 12px 0;
   }
 
+  .photo-grid__item {
+    min-height: 100%;
+  }
+
   .places {
     width: 100%;
     padding: 64px 0 64px;
