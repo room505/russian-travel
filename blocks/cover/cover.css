@@ -1,9 +1,7 @@
 .cover {
   margin: 0 auto;
   width: 92.5%;
-  background-image: url(./../../images/overlay.jpg);
-  background-position: center center;
-  background-size: cover;
+
 }
 
 @media screen and (max-width: 1024px) {

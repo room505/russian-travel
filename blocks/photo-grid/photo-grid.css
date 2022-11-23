@@ -4,14 +4,14 @@
   display: grid;
   grid-auto-rows: auto;
   grid-template-columns: repeat(4, 23.9865%);
-  gap: 18px 18px;
+  gap: 16px 16px;
 }
 
 @media screen and (max-width: 1024px) {
   .photo-grid {
     width: 90.625%;
     grid-template-columns: repeat(3, 32.3275862068966%);
-    gap: 16px 16px;
+    gap: 14px 14px;
   }
 }
 

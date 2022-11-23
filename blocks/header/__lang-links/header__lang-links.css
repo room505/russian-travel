@@ -2,8 +2,7 @@
   list-style: none;
   display: flex;
   margin: 0;
-  padding-top: 16px;
-  padding-right: 1px;
+  padding: 16px 1px 0 0;
 }
 
 @media screen and (min-width: 320px) and (max-width: 692px) {
