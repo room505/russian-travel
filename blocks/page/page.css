@@ -7,4 +7,6 @@
   flex-direction: column;
   justify-content: flex-start;
   flex-wrap: nowrap;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
